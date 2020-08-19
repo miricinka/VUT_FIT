@@ -1,0 +1,221 @@
+#!/bin/sh
+
+export POSIXLY_CORRECT=yes
+
+##########
+# File name: dirgraph
+# Description: Projekt 1 do předmětu IOS 2020, FIT VUT
+# Athor: Mirka Kolaříková (xkolar76)
+# Date: 30.3.2020
+##########
+
+NORM=0         #normalization
+FILE_ERE=0     #regular expression
+W_DIR=$(pwd)   #working directory
+DIR_COUNT=1    #directory counter, starts by cwd
+FILE_COUNT=0   #file counter
+error=0        #helper
+
+#file size counter
+C_100B=0
+C_1KIB=0
+C_10KIB=0
+C_100KIB=0
+C_1MIB=0
+C_10MIB=0
+C_100MIB=0
+C_1GIB=0
+C_BIG=0
+max=0
+
+#goes recursively trough all directories and counts directories and files
+dir_recursion(){
+  for directory in .[!.]* * ..?*; do
+    if [ ! -e "$directory" ]; then
+      continue
+    fi
+    if [ ! -r "$directory" ]; then
+      echo "Chybi pristupova prava v $directory" >&2
+      error=1
+      continue
+    fi
+
+    if [ "$FILE_ERE" -eq 1 ]; then
+      #echo "$directory"
+      if echo "$directory" | grep -Eq -- "$REGEX"; then #ignores files matching regex
+        continue;
+      fi
+    fi
+
+    if [ -d "$directory" ]; then #directory
+      DIR_COUNT=$((DIR_COUNT + 1))
+      cd "$directory"
+      dir_recursion
+      cd ..
+    elif [ -f "$directory" ]; then #file
+      #echo "$directory"
+      FILE_COUNT=$((FILE_COUNT + 1))
+      file_size="$(wc -c <"$directory")" #count size in bytes
+      file_size_count
+
+    fi
+    #do
+  done
+}
+
+#adds file to its size category
+file_size_count(){
+  if [ "$file_size" -lt 100 ]; then
+    C_100B=$((C_100B + 1))
+  elif [ "$file_size" -lt 1024 ]; then
+    C_1KIB=$((C_1KIB + 1))
+  elif [ "$file_size" -lt 10240 ]; then
+    C_10KIB=$((C_10KIB + 1))
+  elif [ "$file_size" -lt 102400 ]; then
+    C_100KIB=$((C_100KIB + 1))
+  elif [ "$file_size" -lt 1048576 ]; then
+    C_1MIB=$((C_1MIB + 1))
+  elif [ "$file_size" -lt 10485760 ]; then
+    C_10MIB=$((C_10MIB + 1))
+  elif [ "$file_size" -lt 104857600 ]; then
+    C_100MIB=$((C_100MIB + 1))
+  elif [ "$file_size" -lt 1073741824 ]; then
+    C_1GIB=$((C_1GIB + 1))
+  elif [ "$file_size" -ge 1073741824 ]; then
+    C_BIG=$((C_BIG + 1))
+  fi
+
+}
+
+#prints hashes to stdout
+# $1 hash count to be printed
+hash_print(){
+  count=$1
+
+  while [ "$count" -gt 0 ]; do
+
+    printf "#"
+    count=$((count - 1))
+  done
+}
+
+#funkce na normalizaci grafu
+# $1 - $9 promenne s poctem souboru
+normalization(){
+
+  line_size=79 #size of line in a file
+
+  if [ -t 1 ]; then
+    line_size=$(tput cols)
+    line_size=$((line_size - 1))
+  fi
+
+  line_size=$((line_size - 12)) #prefix
+
+  while [ $# -gt 0 ];do
+    if [ "$1" -gt "$max" ];then
+      max=$1
+    fi
+    shift
+  done
+
+  if [ "$max" -lt "$line_size" ];then #normalization just if needed
+    NORM=0
+  else
+    C_100B=$((C_100B * line_size / max))
+    C_1KIB=$((C_1KIB * line_size / max))
+    C_10KIB=$((C_10KIB * line_size / max))
+    C_100KIB=$((C_100KIB * line_size / max))
+    C_1MIB=$((C_1MIB * line_size / max))
+    C_10MIB=$((C_10MIB * line_size / max))
+    C_100MIB=$((C_100MIB * line_size / max))
+    C_1GIB=$((C_1GIB * line_size / max))
+    C_BIG=$((C_BIG * line_size / max))
+  fi
+
+}
+
+######################### MAIN #########################
+#process arguments
+while getopts ":i:n" opt; do
+  case "$opt" in
+    n ) NORM=1
+      ;;
+    i ) REGEX="$OPTARG"
+        #if [ "$REGEX" = "-n" ]; then
+         # echo "Help: dirgraph [-i FILE_ERE] [-n] [DIR]" >&2
+         # exit 1
+        #fi
+        FILE_ERE=1
+      ;;
+    * ) echo "Help: dirgraph [-i FILE_ERE] [-n] [DIR]" >&2
+		exit 1
+      ;;
+  esac
+done
+shift $((OPTIND-1))
+
+#empty string after -i
+if [ "$FILE_ERE" -eq 1 ];then
+  if [ -z "$REGEX" ]; then 
+	 echo "Help: dirgraph [-i FILE_ERE] [-n] [DIR]" >&2
+	 exit 1
+  fi
+fi
+#more arguments than allowed
+if [ "$#" -gt 1 ]; then 
+  echo "Help: dirgraph [-i FILE_ERE] [-n] [DIR]" >&2
+  exit 1
+elif [ "$#" -eq 1 ];then
+  W_DIR="$1" #set inicial directory
+  if [ ! -d "$W_DIR" ];then #checks if given directory is valid
+    echo "directory $W_DIR is invalid directory" >&2
+    exit 1
+  fi
+  if [ ! -r "$W_DIR" ];then
+    echo "Cannot read inicial directory $W_DIR ." >&2
+    exit 1
+  fi
+
+fi
+
+#inicial directiry cannot be ignored
+if [ "$FILE_ERE" -eq 1 ];then
+  main_dir=$(basename "$W_DIR")
+  if echo "$main_dir" | grep -Eq -- "$REGEX"; then
+    echo "FILE_ERE cannot cover inicial directory name" >&2
+    exit 1
+  fi
+fi
+
+#calls recurcion on directories
+cd "$W_DIR"
+dir_recursion
+
+#normalization
+if [ "$NORM" -eq 1 ];then
+ normalization "$C_100B" "$C_1KIB" "$C_10KIB" "$C_100KIB" "$C_1MIB" "$C_10MIB" "$C_100MIB" "$C_1GIB" "$C_BIG"
+fi
+
+#prints statistics
+echo "Root directory: $W_DIR"
+echo "Directories: $DIR_COUNT"
+echo "All files: $FILE_COUNT"
+echo "File size histogram:"
+echo "  <100B   : $(hash_print $C_100B)" 
+echo "  <1 KiB  : $(hash_print $C_1KIB)"
+echo "  <10 KiB : $(hash_print $C_10KIB)"
+echo "  <100 KiB: $(hash_print $C_100KIB)"
+echo "  <1 MiB  : $(hash_print $C_1MIB)"
+echo "  <10 MiB : $(hash_print $C_10MIB)"
+echo "  <100 MiB: $(hash_print $C_100MIB)"
+echo "  <1 GiB  : $(hash_print $C_1GIB)"
+echo "  >=1 GiB : $(hash_print $C_BIG)"
+
+if [ "$error" -eq 1 ]; then
+  exit 1
+fi
+
+exit 0
+
+#echo "konec"
