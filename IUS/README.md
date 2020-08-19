@@ -14,8 +14,8 @@ stránkami. Episoda může být součástí volně vydaného svazku (tzv. volume
 stránky (obsahující dodatečné informace od autora, dopisy fanoušků, apod.), a nebo součástí pravidelně 
 vycházejícího magazínu. Episoda se stejným pořadovým číslem může být součásti jak magazínu tak svazku. 
 Uživatelé systému si pak mohou jednotlivé svazy a magazíny dopředu objednávat, a vést si své oblíbené 
-mangy i postavy. Mangy lze dále vyhledávat podle žánrů, vydavatelích, či postavách, které se v nich vyskytují 
-a navíc i poskytuje jejich základní informace (vzhled, věk,...) a rovněž první a poslední výskyt v dané manze 
+mangy i postavy. Mangy lze dále vyhledávat podle žánrů, vydavatelích, či postavách, které se v nich 
+vyskytují a navíc i poskytuje jejich základní informace (vzhled, věk,...) a rovněž první a poslední výskyt v dané manze 
 (za výskyt považujte konkrétní stránku v episodě). Uživatelé se mohou rovněž přihlásit o upozornění, když vyjde 
 nova episoda jejich oblíbené mangy a o zasílání online verze zakoupených svazků a magazínů.
 </pre>
