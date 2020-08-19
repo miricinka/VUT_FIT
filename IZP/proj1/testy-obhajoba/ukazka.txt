@@ -1,0 +1,41 @@
+0)
+gcc -std=c99 -Wall -Wextra -Werror proj1.c -o proj1
+
+1) Test na insert
+$ ./proj1 i.cmd <test.txt
+----
+Toto
+je
+pokusny text
+
+2) Test na next a insert
+$ ./proj1 ni.cmd <test.txt
+Toto
+----
+je
+pokusny text
+
+3) Test na append
+$ ./proj1 a.cmd <test.txt
+Toto taky
+je
+pokusny text
+
+4) Test na next, delete, insert
+$ ./proj1 ndi.cmd <test.txt
+Toto
+byl
+pokusny text
+
+5) Test detekce chyb
+$ ./proj1 chyba1.cmd <test.txt
+$ ./proj1 chyba2.cmd <test.txt
+
+7) Testy na detekci cyklu (bonus)
+$ ./proj1 cycle1.cmd <test.txt
+$ ./proj1 cycle2.cmd <test.txt
+$ ./proj1 cycle3.cmd <test.txt
+
+8) Program Yes
+$ ./proj1 notreallycycle.cmd <test.txt
+
