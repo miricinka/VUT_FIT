@@ -1,8 +1,8 @@
 # Operační systémy
 
-## První projekt
+## [První projekt](https://github.com/miricinka/VUT_FIT/blob/master/IOS/proj1/dirgraph)
 * **body**: 15/15
-* **zadání**
+* [**zadání**](https://github.com/miricinka/VUT_FIT/blob/master/IOS/proj1/projekt1.pdf)
 <pre>
 #-- automaticke hodnoceni -----------------------------
 1:ok: jednoduchy adresar
@@ -25,9 +25,9 @@
 15:celkem bodu za projekt
 </pre>
 
-## Druhý projekt
+## [Druhý projekt](https://github.com/miricinka/VUT_FIT/blob/master/IOS/proj2/proj2.c)
 * **body**: 15/15
-* **zadání**
+* [**zadání**](https://github.com/miricinka/VUT_FIT/blob/master/IOS/proj2/projekt2.pdf)
 <pre>
 #-- automaticke hodnoceni -----------------------------
 = make
