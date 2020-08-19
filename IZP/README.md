@@ -3,6 +3,7 @@
 ## první projekt
 **body**: 5.8/5 (bonusové body)
 
+<div>
 ====== Prehled hodnoceni ==========
 0.4: obhajoba: dekompozice
 0.4: obhajoba: funkce (parametry a delka)
@@ -35,6 +36,7 @@
 0.05:ok: reakce na napovedu
 0.05:ok: reakce na napovedu
 0.1:ok: chybny prikaz v souboru
+</div>
 
 ## druhý projekt
 **body**: 6.5/7
