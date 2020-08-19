@@ -41,6 +41,7 @@
 ## druhý projekt
 **body**: 6.5/7
 
+<pre>
 ====== Prehled hodnoceni ==========
 1.5: obhajoba: log
 1.5: obhajoba: pow
@@ -65,12 +66,15 @@
 0.05:ok: reakce na neocekavany argument
 0.05:ok: reakce na nekompletni argumenty
 0.05:ok: reakce na chybne argumenty
+</pre>
+
 
 ## třetí projekt
 **body**: 7.8/10
 
 **dokumentace body**: 2.4/4
 
+<pre>
 ====== Prehled hodnoceni ==========
 0.5: obhajoba: nacteni vstupu
 0.5: obhajoba: vypis vystupu
@@ -97,7 +101,9 @@
 0:chyba: reakce na chybejici argumenty
 0:chyba: reakce na spatny 2. argument
 0:chyba: reakce na spatny pocet cilovych shluku
+</pre>
 
+<pre>
 ###### Prehled hodnoceni ##########
 0.4: dokumentace popisu pomoci brief/desc (17)
 0.3: dokumentace navratovych hodnot (7)
@@ -110,3 +116,4 @@
 0.3: popis clenu struktury cluster_t ok
 0.2: dokumentace skupin volani (1)
 0.0: dokumentace funkci podle vysledku doxygen (0)
+</pre>
