@@ -1,6 +1,6 @@
-## Úvod do softwarového inženýrství
+# Úvod do softwarového inženýrství
 
-# projekt
+## projekt
 **body**: 24/25
 
 **zadání**:
