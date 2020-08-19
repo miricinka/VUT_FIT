@@ -1,7 +1,7 @@
 # Základy programování
 
 ## [první projekt](https://github.com/miricinka/VUT_FIT/tree/master/IZP/proj1)
-**body**: 5.8/5 (bonusové body)
+* **body**: 5.8/5 (bonusové body)
 
 <pre>
 ====== Prehled hodnoceni ==========
