@@ -8,5 +8,6 @@ body: 6.5/7
 
 ## třetí projekt
 body: 7.8/10
+
 dokumentace body: 2.4/4
 
