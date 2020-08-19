@@ -1,9 +1,9 @@
 # Úvod do softwarového inženýrství
 
 ## [projekt](https://github.com/miricinka/VUT_FIT/blob/master/IUS/xkolar76.pdf)
-**body**: 24/25
+* **body**: 24/25
 
-**zadání**:
+* **zadání**:
 <pre>
 Vytvořte informační systém pro sběratele a čtenáře japonské mangy. Systém uchovává informace o jednotlivých mangách,
 jejich žánrech (shonen, drama, sci-fi), datech vydání a o tom, zda jsou dokončené, a případně jak pravidelně 
