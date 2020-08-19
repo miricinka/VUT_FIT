@@ -1,6 +1,6 @@
 # Základy programování
 
-## [první projekt](https://github.com/miricinka/VUT_FIT/tree/master/IZP/proj1)
+## [První projekt](https://github.com/miricinka/VUT_FIT/tree/master/IZP/proj1)
 * **body**: 5.8/5 (bonusové body)
 
 <pre>
@@ -38,8 +38,8 @@
 0.1:ok: chybny prikaz v souboru
 </pre>
 
-## [druhý projekt](https://github.com/miricinka/VUT_FIT/tree/master/IZP/proj2)
-**body**: 6.5/7
+## [Druhý projekt](https://github.com/miricinka/VUT_FIT/tree/master/IZP/proj2)
+* **body**: 6.5/7
 
 <pre>
 ====== Prehled hodnoceni ==========
@@ -69,10 +69,10 @@
 </pre>
 
 
-## [třetí projekt](https://github.com/miricinka/VUT_FIT/tree/master/IZP/proj3)
-**body**: 7.8/10
+## [Třetí projekt](https://github.com/miricinka/VUT_FIT/tree/master/IZP/proj3)
+* **body**: 7.8/10
 
-**dokumentace body**: 2.4/4
+* **dokumentace body**: 2.4/4
 
 <pre>
 ====== Prehled hodnoceni ==========
