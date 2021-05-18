@@ -1,0 +1,330 @@
+/* author    Mirka Kolarikova */
+/* date      28.3.2021.       */
+/* school project ITW VUT FIT */
+
+body {
+	margin:0;
+	padding:0;
+}
+
+.content {
+	min-width: 768px;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+h1, h2, h3, a, input {
+	font-family: Montserrat;
+	font-weight: normal;
+}
+
+h1, h2, h3, #references p {
+	color: #4d4d4d;
+}
+
+img{
+	max-width:100%;
+}
+
+p {
+	font-family: Merriweather;
+	font-size: 14px;
+	line-height: 1.7;
+	color :#898989;
+}
+
+a {
+	text-decoration: none;
+	color: steelblue;
+}
+
+a:hover {
+	color: black;
+}
+
+#nav-logo a {
+	color: black;
+	font-weight: bold;
+	font-size:25px;
+}
+
+#nav-menu {
+	float : right;
+}
+
+#nav-menu a {
+	font-size: 13px;
+	letter-spacing: .05em;
+	text-transform: uppercase;
+	color: #bfbfbf;
+	padding-left: 20px;
+}
+
+#nav-menu a:hover{
+	color: black;
+}
+
+#nav-menu li {
+	display: inline-block;
+}
+
+#nav-menu ul {
+	margin: 10px;
+}
+
+#navigation {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+#nav-logo, #nav-menu {
+	display:inline-block;
+	vertical-align:middle;
+}
+
+#header .content {
+	position: relative;
+	text-align: center;
+	color: white;
+}
+
+#header h1 {
+	position: absolute;
+	bottom: 20px;
+	left: 40px;
+	color: white;
+	font-size: 32px;
+}
+
+#about {
+	margin-top: 40px;
+	margin-bottom: 100px;
+}
+
+#about h2 {
+	font-size: 40px;
+	text-align: center;
+}
+
+#about h3 {
+	font-size: 24px;
+}
+
+#about h2 + p {
+	text-align: center;
+	font-size: 19px;
+}
+
+.about-item {
+	display: inline-block;
+	width: 30%;
+}
+
+.about-item + .about-item{
+	margin-left: 4%;
+}
+
+.about-item p {
+	color:#bfbfbf;
+}
+
+#middle-sections{
+	padding-top: 40px;
+	padding-bottom: 100px;
+	padding-left: 0px;
+	background-color: whitesmoke;
+}
+
+#middle-sections h2 {
+	font-size: 32px;
+}
+
+#middle-sections h3 {
+	font-size: 24px;
+	margin-bottom: 15px;
+	margin-top: 10px;
+}
+
+#news {
+	width: 60%;
+	float:left;
+}
+
+#news .news-date{
+	font-size: 12px;
+	text-transform: uppercase;
+	font-family: Merriweather;
+	color:#bfbfbf;
+}
+
+#news .news-item {
+	margin-top: 20px;
+	border-bottom: 1px dotted #e3e3e3;
+	margin-right: 20px;
+}
+
+#references {
+	width: 40%;
+	margin-left:30px;
+	overflow: hidden;
+	padding-bottom: 110px;
+}
+
+#references img {
+	max-width: 120px;
+	border-radius: 100px;
+	margin: 20px;
+	float:left;
+}
+
+#references span {
+	font-size: 14px;
+	color:#bfbfbf;
+
+}
+
+#references blockquote {
+	font-style: italic;
+	margin-top:45px;
+}
+
+#references p {
+	font-size: 17px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+}
+
+#news-btn {
+	padding:14px;
+	background-color: lightsteelblue;
+	width:110px;
+	margin:20px;
+}
+
+#news-btn a, #submit-btn {
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 13px;
+	letter-spacing: .15em;
+}
+
+#steps{
+	margin-top: 40px;
+	margin-bottom: 100px;
+}
+
+#steps h3 {
+	font-size: 14px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+#steps .steps-more a {
+	font-size: 11px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.steps-item {
+	display: inline-block;
+	width: 30%;
+	font-family: Merriweather;
+}
+
+.steps-item + .steps-item {
+	margin-left: 4%;
+}
+
+.steps-item i{
+	color:lightsteelblue;
+	font-size: 60px;
+	float: left;
+	margin-right: 10px;
+}
+
+.steps-item p{
+	overflow: hidden;
+}
+
+.steps-item span {
+	float: right;
+	width: 78%;
+}
+
+#contact {
+	padding-top: 40px;
+	padding-bottom: 100px;
+	background-color: #262626;
+}
+
+#contact h3 {
+	color: white;
+	font-size: 24px;
+}
+
+#contact li {
+	 list-style-type: none;
+}
+
+#contact a {
+	text-transform: uppercase;
+}
+
+#contact a:hover {
+	color: white;
+}
+
+.contact-item {
+	display: inline-block;
+	width: 33%;
+	vertical-align: top;
+}
+
+.contact-item h3 {
+	margin-top: 0px;
+}
+
+.contact-item ul {
+	padding-left: 0px;
+}
+
+input {
+	height: 40px;
+	border-radius: 4px;
+	border: none;
+	font-size: 18px;
+	padding-left: 4px;
+}
+
+#email-form {
+	width: 100%;
+	margin-bottom: 4px;
+}
+
+
+#email-form:invalid {
+	color: red;
+}
+
+
+#submit-btn {
+	color: white;
+	background-color: steelblue;
+}
+
+#submit-btn:hover {
+	color: black;
+}
+
+#footer-note {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: #1a1a1a;
+}
+
+#footer-note span {
+	font-size: 12px;
+	color: #bfbfbf;
+}

@@ -1,0 +1,528 @@
+/*****************************************************
+Author: Mirka Kolarikova
+Date: 20.3.2021
+*****************************************************/
+
+
+
+/************** ZAKLADNI VLASTNOSTI ******************/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+.content {
+	padding:8vh 2vw 1vh;
+	max-width: 1100px;
+	margin: 0 auto;
+}
+
+h1 {
+	font-family: 'Parisienne', cursive;
+	font-size: 60px;
+	color: #1F0411;
+}
+
+@media screen and (max-width: 768px) {
+	h1 {
+		font-size: 50px;
+	}
+}
+
+h2 {
+	text-align: center;
+	font-family:Verdana, Geneva, sans-serif;
+	color: #1F0411;
+}
+
+h3 {
+	font-family: 'Parisienne', cursive;
+	font-size: 40px;
+}
+
+p {
+	font-family: 'Rajdhani', sans-serif;
+}
+
+a:hover {
+	color: #79003E;
+}
+
+/********************* NAVIGACE *********************/
+
+nav {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	min-height: 8vh;
+	background-color: #ac3973;
+	font-family: "Poppins", sans-serif;
+	z-index: 999;
+}
+
+.nav-logo a {
+	color: #e2e2e2;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 20px;
+}
+
+.nav-logo a:hover {
+	color: #1F0411;
+}
+
+.navlist {
+	display: flex;
+	justify-content: space-around;
+	width: 40%;
+}
+
+.navlist li {
+	list-style: none;
+}
+
+.navlist a {
+	color: #e2e2e2;
+	text-decoration: none;
+	letter-spacing: 1px;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.navlist a:hover {
+	color: #610032;
+}
+
+.burger {
+	display: none;
+}
+
+.burger div {
+	width: 25px;
+	height: 3px;
+	background-color: #e2e2e2;
+	margin: 5px;
+	transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1024px) {
+	.navlist {
+		width: 60%;
+	}
+}
+
+/* toggle nav on mobile phone */
+@media screen and (max-width: 768px) {
+	body {
+		overflow-x: hidden;
+	}
+	
+	.navlist {
+		position: fixed; 
+		right: 0px;
+		flex-direction: column;
+		align-items: center;
+		width: 50%;
+		transform: translateX(100%);
+		transition: transform 0.3s ease-in;
+		height: 92vh;
+		top: 8vh;
+		background-color: #ac3973;
+		display: flex;
+	}
+	
+	.burger {
+		display: block;
+		cursor: pointer;
+	}
+}
+
+.nav-toggle {
+		transform: translateX(0%);
+}
+
+/****************** O ME **************************/
+
+/* na PC na celou stranku */
+@media screen and (min-width: 768px) and (min-height: 610px){
+	.o_me_container {
+		padding-bottom: 10vh;
+		height: 100vh;
+	}
+}
+
+#o_me img {
+	border-radius: 50%;
+	border: 5px solid white;
+	width: 100%;
+}
+
+#o_me h3 {
+	font-family: Geneva, sans-serif;
+	font-size: 24px;
+	color: #79003E;
+}
+
+@media screen and (min-width: 768px) {
+	.o_me_container {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.o_me_item {
+		width:50%;
+		padding: 3%;
+	}
+
+	#o_me {
+		background: url(img/hair.jpg);
+		background-attachment: fixed;
+		background-size: 100%;
+		background-repeat: no-repeat;
+	}	
+
+	#o_me .o_me_item_1 {
+		width: 30%;
+		margin-bottom: -80px;
+		z-index: 666;
+	}
+
+	#o_me .o_me_item_2 {
+		background-color: white;
+		width:60%;
+	}
+}
+
+.contact {
+	padding: 10px;
+}
+
+.contact-item {
+	padding-top: 2px;
+}
+
+.contact-item a {
+	text-decoration: none;
+	color: #79003E;
+	font-family: "Poppins", sans-serif;
+	padding-left: 2px;
+}
+
+.contact-item a:hover {
+	color: black;
+}
+
+.social-media {
+	display: flex;
+	align-items: center;
+}
+
+.social-media a {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 33%;
+	text-align: center;
+}
+
+.social-media i {
+	font-size: 30px;
+	color:#555;
+}
+
+.social-media i:hover {
+	color: #1F0411;
+}
+
+@media screen and (max-width: 768px) {
+	#o_me img {
+		margin-top: 5%;
+		border: 5px ;
+		border: 10px solid #555;
+	}
+
+	.o_me_item_1 {
+		width: 70%;
+		margin: auto;
+	}
+
+	.social-media i{
+		font-size: 50px;
+		margin: 3%;
+	}
+
+	.contact-item i, .contact-item a {
+		font-size: 20px;
+	}
+
+	.contact {
+		padding-bottom: 20px;
+		padding-top: 0;
+	}
+}
+
+/******************** DOVEDNOSTI ************************/
+
+/* na PC na celou stranku */
+@media only screen and (min-width: 768px) and (min-height: 610px){
+	#dovednosti {
+	height: 100vh;
+	}
+}
+
+#dovednosti {
+	display: flex;
+	align-items: center;
+	background-color: #f5edf1;
+}
+
+#dovednosti h2 {
+	font-size: 30px;
+	padding: 20px;
+}
+
+#dovednosti-p {
+	font-size: 22px;
+	padding: 3%;
+}
+
+
+.dovednost img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 33%;
+	padding: 5%;
+	border: 2px dotted #555;
+	border-radius: 27%;
+	background-color: white;
+}
+
+.dovednost h3 {
+	 text-align: center;
+	 font-size: 40px;
+	 padding-top: 5px;
+	 padding-bottom: 3px;
+	 color: #e2e2e2;
+}
+
+.dovednost {
+	display: inline-block;
+	width: 29%;
+	margin-top: 5%;
+	background-color: #57203b;
+	padding: 2%;
+	border-radius: 10%;
+	margin: 1.5%;
+}
+
+.dovednost p {
+	color: #e2e2e2;
+}
+
+@media screen and (max-width: 768px) {
+
+	#dovednosti h2 {
+	font-size: 25px;
+	padding: 20px;
+	}
+
+	#dovednosti-p {
+	font-size: 16px;
+	}
+
+	.dovednost {
+	padding: 8%;
+	display: block;
+	width: 90%;
+	background-color: #57203b;
+	border-radius: 10%;
+	margin:5%;
+	}
+}
+
+/******************** KVALIFIKACE *********************/
+
+/* na PC na celou stranku */
+@media screen and (min-width: 768px) and (min-height: 610px) {
+	#vzdelani {
+	height: 100vh;
+	}
+}
+
+#vzdelani {
+	display: flex;
+	align-items: center;
+	background-color: #dbd9da;
+}
+
+#vzdelani h2 {
+	font-size: 30px;
+	padding: 20px;
+}
+
+#vzdelani h3 {
+	font-family: Geneva, sans-serif;
+	font-size: 24px;
+	color: #79003E;
+}
+
+#vzdelani h4 {
+	font-family: "Poppins", sans-serif;
+	font-size: 20px;
+	color: #1F0411;
+}
+
+.vzdelani {
+	margin-bottom: 5%;
+}
+
+.vzdelani-item {
+	max-width: 600px;
+	padding: 10px;
+	border-bottom: 2px solid white;
+	display: flex;
+	align-items: center;
+}
+
+.vzdelani-item-inner i {
+	font-size: 40px;
+	margin-right: 20px;
+}
+
+.kurzy {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 10%;
+	flex-wrap: wrap;
+}
+
+.kurz {
+	margin: 10px;
+	padding: 17px;
+	background-color: white;
+	border-radius: 15px 50px;
+	box-shadow: 5px 10px 8px #888888;
+}
+
+#vzdelani .kurz h3 {
+	font-size: 20px;
+}
+
+#vzdelani .kurz h4 {
+	font-size: 15px;
+}
+
+@media screen and (max-width: 768px) {
+	.kurzy {
+		justify-content: space-around;
+	}
+	.kurz {
+		min-width: 260px;
+	}
+}
+
+
+/******************* ME PRACE **********************/
+
+#me_prace h2 {
+	padding: 20px;
+}
+
+#me_prace .content {
+	padding-bottom: 30px;
+}
+
+.galerie {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.galerie input {
+	display: none;
+}
+
+.galerie label {
+	margin: 1%;
+	width: 22%;
+	text-align: center;
+	cursor: pointer;
+	padding: 20px;
+	background-color: #dbd9da;
+	font-weight: bold;
+	font-family: "Poppins", sans-serif;
+}
+
+.galerie .tab {
+	order: 1;
+	width: 100%;
+	display: none;
+}
+
+/* prepinani mezi kategoriema */
+.galerie input:checked + label + .tab {
+	display: block;
+}
+
+.galerie input:checked + label {
+	background: #57203b;
+	color: white;
+}
+
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 5px;
+}
+
+/* 3 fotky na radku */
+.item {
+	margin: 5px;
+	width: 32%;
+	height: 32%;
+}
+
+/* na mobilu 2 fotky na radku */
+@media screen and (max-width: 768px) {
+	.item {
+		width: 45%;
+		height: 45%;
+	}
+
+	.galerie label {
+		padding-left: 2px;
+		padding-right: 2px;
+	}
+
+}
+
+/****************** FOOTER ***********************/
+
+
+footer {
+	background-color: #1F0411;
+}
+
+footer .content {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+footer span {
+	font-size: 12px;
+	color: #e2e2e2;
+	font-family: "Poppins", sans-serif;
+	padding-left: 5px;
+}
