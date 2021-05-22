@@ -1,5 +1,5 @@
 
-# # Zpracování a vizualizace dat v prostředí Python
+# Zpracování a vizualizace dat v prostředí Python
 
 ## [První část projektu](https://github.com/miricinka/VUT_FIT/tree/master/IZV/projekt_1_cast)
 * **body**: 18/20
