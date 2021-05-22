@@ -1,0 +1,54 @@
+MY-MIB DEFINITIONS ::= BEGIN
+IMPORTS
+
+        OBJECT-TYPE, Integer32
+	MODULE-IDENTITY                       FROM SNMPv2-SMI
+        DisplayString                         FROM SNMPv2-TC
+	MODULE-COMPLIANCE, OBJECT-GROUP       FROM SNMPv2-CONF
+	experimental                          FROM SNMPv2-SMI;
+
+isa-project-module MODULE-IDENTITY
+    LAST-UPDATED "202010260000Z"
+    ORGANIZATION "VUT-FIT"
+    CONTACT-INFO "email : xkolar76@stud.fit.vutbr.cz"
+    DESCRIPTION  "MIB for ISA school project"
+    ::= { experimental 22 }
+
+
+loginString OBJECT-TYPE
+    SYNTAX      DisplayString
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION
+	"String with my login"
+    DEFVAL { "xkolar76" }
+    ::= { isa-project-module 1 }
+
+timeString OBJECT-TYPE
+    SYNTAX      DisplayString
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION
+	"String with RFC time"
+    DEFVAL { "2020-11-15T16:27:10Z" }
+    ::= { isa-project-module 2 }
+
+readwriteInt OBJECT-TYPE
+    SYNTAX      Integer32
+    MAX-ACCESS  read-write
+    STATUS      current
+    DESCRIPTION
+	"Read/write string32"
+    DEFVAL { 666 }
+    ::= { isa-project-module 3 }
+
+operatingSystem OBJECT-TYPE
+    SYNTAX      DisplayString
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION
+	"OS"
+    DEFVAL { "CentOS Linux 7 (Core)" }
+    ::= { isa-project-module 4 }
+
+END
