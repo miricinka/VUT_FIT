@@ -5,15 +5,21 @@
 * **body**: 13.8/14
 * **Komentář učitele k hodnocení:**  
  <pre>
- Chvályhodné nadšení pro řešení projektu, snaha řešit projekt včas, kvalitně a/nebo nad rámec vymezený zadáním ( 1 z 1 b. ).
+ Chvályhodné nadšení pro řešení projektu, snaha řešit projekt včas, kvalitně a/nebo nad rámec vymezený zadáním ( 1 z 1 b.).
  Řešení je zcela funkční ( 5 z 5 b. ). 
- Dekompozice řešení je na velmi dobré úrovni ( .85 z 1 b. ). Způsob řešení je zcela pochopitelný a čitelný ( 1 z 1 b. ). Uživatelská přívětivost řešení je na vysoké úrovni ( 1 z 1 b. ). 
- Úvod do řešené problematiky (motivace, přehled použitých HW/SW prostředků (moduly a jejich registry, knihovny a jejich API atp.), s tématem/řešením souvisejících principů, metod atd.) v dokumentaci je zpracován chvályhodně ( 1 z 1 b. ). 
+ Dekompozice řešení je na velmi dobré úrovni ( .85 z 1 b. ).
+ Způsob řešení je zcela pochopitelný a čitelný ( 1 z 1 b. ).
+ Uživatelská přívětivost řešení je na vysoké úrovni ( 1 z 1 b. ). 
+ Úvod do řešené problematiky (motivace, přehled použitých HW/SW prostředků 
+ (moduly a jejich registry, knihovny a jejich API atp.), s tématem/řešením 
+ souvisejících principů, metod atd.) v dokumentaci je zpracován chvályhodně ( 1 z 1 b. ). 
  Popis způsobu řešení v dokumentaci je zpracován chvályhodně ( 2 z 2 b. ). 
  Zhodnocení řešení v dokumentaci je provedeno velmi kvalitně ( .9 z 1 b. ). 
  Prezentace řešení byla chályhodná ( 1 z 1 b. ).  
   
-Pozn.: výsledné hodnocení ( 13.8 ) vzniklo zaokrouhlením součtu dílčích, výše uvedených, bodových hodnocení (výsledný součet je 13.75), násobeným ohodnocením míry funkčnosti řešení (míra je K1 + K2 * 5 / 5 [kde K1=0.25, K2=0.75 jsou konstanty hodnoticího algoritmu] = 1).  
+Pozn.: výsledné hodnocení ( 13.8 ) vzniklo zaokrouhlením součtu dílčích, výše uvedených,
+bodových hodnocení (výsledný součet je 13.75), násobeným ohodnocením míry funkčnosti řešení
+(míra je K1 + K2 * 5 / 5 [kde K1=0.25, K2=0.75 jsou konstanty hodnoticího algoritmu] = 1).  
   
 Příkladné řešení - prakticky nemám připomínky. Kód mohl být lépe dekomponován, např. v main().
 </pre>
