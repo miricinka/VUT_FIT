@@ -2,6 +2,7 @@
 # projekt do předmětu Síťové aplikace a správa sítí
 ### Rozšíření SNMP agenta
 ### Autor: Mirka Kolaříková <xkolar76@stud.fit.vutbr.cz>
+### Body: 20/20
 ### Popis 
 Rozšíření agenta o modul isa-project-module, který definuje 4 nové objekty:
 - .1.3.6.1.3.22.1: read-only string obsahující login xkolar76
