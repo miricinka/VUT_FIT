@@ -1,7 +1,7 @@
 
 # Mikroprocesorové a vestavěné systémy
 
-## [ Měření výpočetních režií modulem Data Watchpoint and Trace (DWT)](https://github.com/miricinka/VUT_FIT/tree/master/IZV/projekt_1_cast)
+## Měření výpočetních režií modulem Data Watchpoint and Trace (DWT)
 * **body**: 13.8/14
 * **Komentář učitele k hodnocení:**  
  <pre>
